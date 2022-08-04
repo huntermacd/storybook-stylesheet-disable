@@ -1,3 +1,16 @@
+# v1.0.8 (Thu Aug 04 2022)
+
+#### ⚠️ Pushed to `main`
+
+- chore: fix typo ([@huntermacd](https://github.com/huntermacd))
+- chore: remove unneeded scripts ([@huntermacd](https://github.com/huntermacd))
+
+#### Authors: 1
+
+- Hunter MacDermut ([@huntermacd](https://github.com/huntermacd))
+
+---
+
 # v1.0.2 (Thu Aug 04 2022)
 
 #### ⚠️ Pushed to `main`
