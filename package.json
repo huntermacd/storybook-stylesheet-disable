@@ -1,15 +1,19 @@
 {
-  "name": "storybook-addon-kit",
-  "version": "0.0.0",
-  "description": "everything you need to build a Storybook addon",
+  "name": "storybook-stylesheet-disable",
+  "version": "1.0.0",
+  "description": "A Storybook add-on that makes it easy to disable stylesheets.",
   "keywords": [
-    "storybook-addons"
+    "storybook-addons",
+    "stylesheet",
+    "disable",
+    "style",
+    "css"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybookjs/storybook-addon-kit"
+    "url": "https://github.com/huntermacd/storybook-stylesheet-disable"
   },
-  "author": "package-author",
+  "author": "Hunter MacDermut",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -45,7 +49,13 @@
     "@babel/preset-react": "^7.12.5",
     "@babel/preset-typescript": "^7.13.0",
     "@storybook/addon-essentials": "^6.5.8",
+    "@storybook/addons": "^6.5.8",
+    "@storybook/api": "^6.5.8",
+    "@storybook/components": "^6.5.8",
+    "@storybook/core-events": "^6.5.8",
     "@storybook/react": "^6.5.8",
+    "@storybook/theming": "^6.5.8",
+    "@types/react": "^18.0.15",
     "auto": "^10.3.0",
     "babel-loader": "^8.1.0",
     "boxen": "^5.0.1",
@@ -53,16 +63,13 @@
     "dedent": "^0.7.0",
     "prettier": "^2.3.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
+    "react": "^17.0.0",
     "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.2.4",
     "zx": "^1.14.1"
   },
   "peerDependencies": {
-    "@storybook/addons": "^6.5.8",
-    "@storybook/api": "^6.5.8",
-    "@storybook/components": "^6.5.8",
     "@storybook/core-events": "^6.5.8",
     "@storybook/theming": "^6.5.8",
     "react": "^16.8.0 || ^17.0.0",
@@ -80,10 +87,11 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "Addon Kit",
+    "displayName": "Stylesheet Disable",
     "supportedFrameworks": [
-      "supported-frameworks"
+      "react"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }

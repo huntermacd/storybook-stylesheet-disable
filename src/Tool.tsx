@@ -1,31 +1,37 @@
-import React, { useCallback } from "react";
-import { useGlobals } from "@storybook/api";
-import { Icons, IconButton } from "@storybook/components";
-import { TOOL_ID } from "./constants";
+import React from 'react';
+import { useGlobals } from '@storybook/api';
+import { Icons, IconButton } from '@storybook/components';
 
 export const Tool = () => {
-  const [{ myAddon }, updateGlobals] = useGlobals();
+  const [globals, updateGlobals] = useGlobals();
+  const iframe = document.getElementById(
+    'storybook-preview-iframe',
+  ) as HTMLIFrameElement;
 
-  const toggleMyTool = useCallback(
-    () =>
-      updateGlobals({
-        myAddon: myAddon ? undefined : true,
-      }),
-    [myAddon]
-  );
+  const toggle = () => {
+    const linkElements: NodeListOf<HTMLLinkElement> =
+      iframe.contentDocument.querySelectorAll(
+        `[title="${globals.stylesheetId}"]`,
+      );
+
+    for (let i = 0; i < linkElements.length; i++) {
+      const element = linkElements[i];
+
+      if (element.title === globals.stylesheetId) {
+        element.disabled = !element.disabled;
+      }
+    }
+
+    updateGlobals({ CSSToggled: !globals.CSSToggled });
+  };
 
   return (
     <IconButton
-      key={TOOL_ID}
-      active={myAddon}
-      title="Enable my addon"
-      onClick={toggleMyTool}
+      active={globals.CSSToggled}
+      onClick={toggle}
+      title="Enable/disable stylesheets"
     >
-      {/*
-        Checkout https://next--storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels
-        for the full list of icons
-      */}
-      <Icons icon="lightning" />
+      <Icons icon="markup" />
     </IconButton>
   );
 };
