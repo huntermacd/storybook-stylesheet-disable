@@ -1,6 +1,6 @@
 {
   "name": "storybook-stylesheet-disable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Storybook add-on that makes it easy to disable stylesheets.",
   "keywords": [
     "storybook-addons",
