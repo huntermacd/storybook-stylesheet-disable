@@ -21,7 +21,7 @@ module.exports = {
 3. Configure `stylesheetId` in `preview.js` within your `.storybook` directory:
 
 ```
-export const parameters = {
+export const globals = {
   ...,
   stylesheetId: 'your-unique-id-here',
   ...,
