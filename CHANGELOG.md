@@ -10,6 +10,18 @@
 
 ---
 
+# v1.0.9 (Tue Aug 09 2022)
+
+#### ⚠️ Pushed to `main`
+
+- fix: properly wire-up globals, add button component for demo (whosebluesanyway@gmail.com)
+
+#### Authors: 1
+
+- Hunter MacDermut (whosebluesanyway@gmail.com)
+
+---
+
 # v1.0.8 (Thu Aug 04 2022)
 
 #### ⚠️ Pushed to `main`
